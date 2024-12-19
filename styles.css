@@ -113,6 +113,20 @@ body {
     color: #fff;
   }
   
+  /* Response message styling */
+  .response-message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    min-height: 40px; /* to keep space even if empty */
+  }
+  
+  .response-message.visible {
+    opacity: 1;
+  }
+  
   /* Animations */
   @keyframes showEnvelope {
     0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
