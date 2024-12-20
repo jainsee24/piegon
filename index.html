@@ -17,7 +17,7 @@
         <img src="env.gif" alt="Envelope" class="envelope-image">
       </div>
       <div class="letter-content">
-        <h2>Hey, Congratulations! You just won a date with me. Would you like to claim your prize??</h2>
+        <h2>  Hey <span id="name-display"></span>, congratulations! You just found the most amazing guy. Would you like to claim your prize??</h2>
         <div class="buttons">
           <button class="yes-btn">Yes</button>
           <button class="no-btn">No</button>
@@ -26,6 +26,7 @@
       <div class="response-message"></div>
     </div>
   </div>
+
 
 <script>
   const yesBtn = document.querySelector('.yes-btn');
@@ -41,6 +42,11 @@
     responseMessage.textContent = "Choose again";
     responseMessage.classList.add('visible');
   });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name'); // "Alex"
+        document.getElementById('name-display').textContent = name || 'there';
+
 </script>
 
 </body>
